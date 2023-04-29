@@ -1,0 +1,101 @@
+@import url(global/global.css);
+
+a{
+    cursor: pointer;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+}
+
+.hero{
+    display: grid;
+    grid-template-areas: 
+    "menu"
+    "formulario"
+    "footer";
+    grid-template-rows: auto 70vh auto;
+}
+
+/* CONTENIDO MENU */
+
+.menu {
+    grid-area: menu;
+    display: grid;
+    height: 10vh;
+    background-color: var(--negro);
+}
+
+.menu-contenedor {
+    display: grid;
+    grid-template-areas:
+        "titulo enlaces";
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.menu-titulo {
+    grid-area: titulo;
+}
+
+.menu-contenedor .menu-titulo .menu__titulo {
+    font-size: 1.8vw;
+    font-weight: bold;
+}
+
+.menu-lista {
+    grid-area: enlaces;
+}
+
+.menu-contenedor .menu-lista {
+    display: flex;
+}
+
+.menu-contenedor .menu-titulo .menu__titulo {
+    color: var(--blanco);
+}
+
+.menu-contenedor .menu-lista .menu__item {
+    color: var(--blanco);
+}
+
+.menu-contenedor .menu-lista .menu__item a {
+    font-size: 1.2vw;
+    margin-left: 2vw;
+    color: var(--blanco);
+}
+
+.menu__item--active a {
+    font-weight: bold;
+    border-bottom: 1px solid var(--blanco);
+}
+
+
+/* CONTENIDO REDES */
+
+.footer {
+    grid-area: footer;
+    display: grid;
+    align-items: center;
+    height: 20vh;
+    background-color: var(--negro);
+}
+
+.contenido-redes {
+    padding: 0 5vw;
+    display: grid;
+    justify-items: center;
+    row-gap: 1vw;
+}
+
+.redes-texto p {
+    color: var(--blanco);
+    font-size: 0.9vw;
+}
+
+.redes-texto a {
+    color: var(--blanco);
+}
